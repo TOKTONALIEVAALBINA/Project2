@@ -1,6 +1,7 @@
 import dairyProducts.DairyProducts;
 import dairyProducts.Milk;
 import meatProducts.MeatProducts;
+import productStore.Manager;
 import productStore.Product;
 import productStore.StoreDao;
 import productStore.StoreServiceImpl;
@@ -30,7 +31,8 @@ public class Main {
         storeService.addNewProducts(products1);
         System.out.println("**********");
         storeService.sortByDate(products1);
-        storeService.getAllProducts();
+        Manager manager = new Manager();
+        storeService.getAllProducts(manager.getLogin(),manager.getPassword(),products1);
 
     }
 }

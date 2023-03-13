@@ -50,8 +50,8 @@ public class StoreServiceImpl implements StoreService {
         String login1 = myScanner.nextLine();
         System.out.println("write password : ");
         int password1 = myScanner.nextInt();
-        if (login1.equals(manager.getLogin() &&
-                password1 == manager.getPassword())) {
+        if (login1.equals(manager.getLogin()) &&
+                password1 == manager.getPassword()) {
 
             System.out.println(storeDao.getProducts());
 
